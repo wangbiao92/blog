@@ -4,6 +4,6 @@
 
 ---
 
-- ## [pandas使用](http://wangbiao92.github.io/blog/pandas.html)
-- ## [selenium使用](http://wangbiao92.github.io/blog/selenium.html)
-- ## [python exe 打包](http://wangbiao92.github.io/blog/pack.html)
+- ## [pandas使用](http://wangbiao92.github.io/blog/templates/pandas.html)
+- ## [selenium使用](http://wangbiao92.github.io/blog/templates/selenium.html)
+- ## [python exe 打包](http://wangbiao92.github.io/blog/templates/pack.html)

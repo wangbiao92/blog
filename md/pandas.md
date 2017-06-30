@@ -1,5 +1,5 @@
-### 区别(Numpy, Scipy, Pandas)
-
+区别(Numpy, Scipy, Pandas)
+====================
 - Numpy是以矩阵为基础的数学计算模块，纯数学。
 - Scipy基于Numpy，科学计算库，有一些高阶抽象和物理模型。比方说做个傅立叶变换，这是纯数学的，用Numpy；做个滤波器，这属于信号处理模型了，在Scipy里找。
 - Pandas提供了一套名为DataFrame的数据结

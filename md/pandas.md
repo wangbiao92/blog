@@ -8,23 +8,21 @@
 ### pandas 基本用法→处理数据
 
 - 读取csv文件, names表示列标签，可以忽略
-```
-import pandas as pd
-test_pd = pd.read_csv('xxx.txt', names=["a", "b", "c"])
-``` 
+
+      import pandas as pd
+      test_pd = pd.read_csv('xxx.txt', names=["a", "b", "c"])
+
 - 排序
-```
-test_pd.sort.sort_values(by="a")
-# test_pd.sort.sort_values(by=["a","b"])
-```
+
+      test_pd.sort.sort_values(by="a")
+      # test_pd.sort.sort_values(by=["a","b"])
 - 删除行
-```
-test_pd[test_pd[(test_pd["a"]>0) & (test_pd["b"]>0)]]
-test_pd.drop_duplicates("a")#删除a列重复的值
-```
+
+      test_pd[test_pd[(test_pd["a"]>0) & (test_pd["b"]>0)]]
+      test_pd.drop_duplicates("a")#删除a列重复的值
+
 
 - 写入csv或者txt文件
-```
-test_pd.to_csv("xx.csv", header=None,index=None)
-# header 表示列名， index 表示行名
-```
+
+      test_pd.to_csv("xx.csv", header=None,index=None)
+      # header 表示列名， index 表示行名

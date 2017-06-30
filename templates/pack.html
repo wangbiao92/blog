@@ -721,8 +721,8 @@ pre {
   position: relative;
   border-color: #4078c0;
 }
-</style><title>pack</title></head><body><article class="markdown-body"><h2>
-<a id="user-content-exe打包工具" class="anchor" href="#exe%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>exe打包工具</h2>
+</style><title>pack</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-exe打包工具" class="anchor" href="#exe%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>exe打包工具</h1>
 <ol>
 <li>
 <strong>Py2exe</strong>（不再更新）</li>
@@ -731,22 +731,28 @@ pre {
 </ol>
 <hr>
 <ul>
-<li>安装pyinstaller(pip的话目前只试用3.5及以前版本)</li>
-</ul>
+<li>
+<p>安装pyinstaller(pip的话目前只试用3.5及以前版本)</p>
 <pre><code>pip install pyinstaller
 </code></pre>
-<ul>
-<li>打包exe文件<br>
+</li>
+<li>
+<p>打包exe文件
 1、打开cmd，指定到要打包的文件路径<br>
-2、</li>
-</ul>
+2、</p>
 <pre><code>pyinstaller -F xx.py
 </code></pre>
+</li>
+</ul>
 <p>3、完成→ 报错（python版本问题报错）</p>
-<pre><code>IndexError: tuple index out of range
+<pre><code>  IndexError: tuple index out of range
 </code></pre>
-<p>解决：
-1.安装3.5级以下版本
-或
-2.<a href="https://github.com/pyinstaller/pyinstaller">https://github.com/pyinstaller/pyinstaller</a> 把PyInstaller提出来。删掉python/Lib/site-packages/PyInstaller 文件夹，把解压得到的PyInstaller放进去应该就OK了</p>
+<p>#####解决：</p>
+<ol>
+<li>安装3.5级以下版本<br>
+或<br>
+</li>
+<li>
+<a href="https://github.com/pyinstaller/pyinstaller">https://github.com/pyinstaller/pyinstaller</a> 把PyInstaller提出来。删掉python/Lib/site-packages/PyInstaller 文件夹，把解压得到的PyInstaller放进去应该就OK了</li>
+</ol>
 </article></body></html>

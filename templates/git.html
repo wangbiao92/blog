@@ -721,57 +721,40 @@ pre {
   position: relative;
   border-color: #4078c0;
 }
-</style><title>selenium</title></head><body><article class="markdown-body"><ul>
+</style><title>git</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-git的使用" class="anchor" href="#git%E7%9A%84%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>git的使用</h1>
+<ul>
 <li>
-<p>利用selenium模拟登入，获取cookies</p>
-<pre><code>from selenium import webdriver
-import requests
+<p>新建一个仓库，或者下载一个</p>
+<pre><code># 初始化仓库
+git init
+# clone仓库
+git clone xxx.com
 </code></pre>
 </li>
 <li>
-<p>模拟登陆</p>
-<pre><code>browse = webdriver.Chrome()
-browse.get(url)
+<p>跟踪文件tracked，并提交到暂存区</p>
+<pre><code># 指定文件
+git add filename
+# 本地文件覆盖到服务器（包括文件的删除，新建,修改）
+git add -A
+# 只有文件的修改以及新建
+git add .
 </code></pre>
 </li>
 <li>
-<p>获取cookie
-def getCookies():
-cookie_arr = [item["name"] + "=" + item["value"] for item in browse.get_cookies()]
-cookies = ';'.join(item for item in cookie_arr)
-return cookies
-headers = {'Cookie':cookies}
-requests.get("<a href="http://www.baidu.com">http://www.baidu.com</a>", headers = headers)</p>
-</li>
-<li>
-<p>爬取https链接，解决SSL证书错误问题：SSLError: bad handshake</p>
-<pre><code>requests.get("https://webvpn.ruijie.com.cn", headers = headers, verify=false)
+<p>代码提交(未同步到服务器)</p>
+<pre><code># 提交暂存区的文件
+git commit -m "message"
+# 提交指定文件
+git commit filename -m "message"
+# 提交已跟踪未暂存的文件
+# git commit -am "message"
 </code></pre>
 </li>
 <li>
-<p>解决warning问题</p>
-<pre><code>from requests.packages.urllib3.exceptions import InsecureRequestWarning
-</code></pre>
-</li>
-<li>
-<p>禁用安全请求警告</p>
-<pre><code>requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-</code></pre>
-</li>
-<li>
-<p>解决html中文乱码问题</p>
-<pre><code>html = requests.get(url)
-html.encoding = "utf-8"
-</code></pre>
-</li>
-<li>
-<p>xpath 用法</p>
-</li>
-<li>
-<p>取消弹窗警告</p>
-<pre><code>browse.switch_to_alert.accept()
-browse.switch_to_alert.dismiss()
-</code></pre>
+<p>代码同步
+# git push</p>
 </li>
 </ul>
 </article></body></html>
